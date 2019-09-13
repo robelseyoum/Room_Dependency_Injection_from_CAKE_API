@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <color name="HeadlineColor">#273c75</color>
+    <color name="ErrorColor">#FD1000</color>
+
+    <color name="MainHeaderColor">#40739e</color>
+
+</resources>
