@@ -8,7 +8,7 @@ class MyApplication: Application() {
         super.onCreate()
 
         DaggerAppComponent.builder()
-            .networkModule(NetworkModule(this))
+            //.networkModule(NetworkModule(this))
             .build()
             .inject(this)
     }

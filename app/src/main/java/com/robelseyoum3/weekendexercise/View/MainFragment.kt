@@ -14,9 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 import com.robelseyoum3.weekendexercise.R
-import com.robelseyoum3.weekendexercise.di.DaggerAppComponent
-import com.robelseyoum3.weekendexercise.di.MyApplication
-import com.robelseyoum3.weekendexercise.di.NetworkModule
+import com.robelseyoum3.weekendexercise.di.*
 import com.robelseyoum3.weekendexercise.model.CakeResult
 import com.robelseyoum3.weekendexercise.viewmodel.CakeViewModel
 import com.robelseyoum3.weekendexercise.viewmodel.CakeViewModelFactory
@@ -41,11 +39,21 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        /*
 
         DaggerAppComponent.builder()
             .networkModule(NetworkModule(activity!!.application as MyApplication))
             .build()
             .inject(this)
+
+        */
+
+        DaggerFragmentComponent.builder()
+            .networkModule(NetworkModule(activity!!.application))
+            .fragmentModule(FragmentModule())
+            .build()
+            .inject(this)
+
 
         viewModel = ViewModelProviders.of(this, cakeViewModelFactory).get(CakeViewModel::class.java)
 

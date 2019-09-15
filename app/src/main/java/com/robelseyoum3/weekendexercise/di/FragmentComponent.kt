@@ -5,10 +5,7 @@ import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = arrayOf(NetworkModule::class))
-interface AppComponent {
-
-    fun inject(myApplication: MyApplication)
-    //fun inject(mainFragment: MainFragment)
-
+@Component(modules = arrayOf(FragmentModule::class, NetworkModule::class))
+interface FragmentComponent {
+    fun inject(mainFragment: MainFragment)
 }

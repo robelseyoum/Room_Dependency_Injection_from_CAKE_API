@@ -27,7 +27,6 @@ class NetworkModule(private val application: Application){
             .build()
     }
 
-
     @Provides
     @Singleton
     fun provideLoggingInterceptor(): HttpLoggingInterceptor{
@@ -42,7 +41,6 @@ class NetworkModule(private val application: Application){
             .addInterceptor(loggingInterceptor).build()
     }
 
-
     @Provides
     @Singleton
     fun provideClientInterface(retrofit: Retrofit) = retrofit.create(CakeRequestInterface::class.java)
@@ -52,9 +50,4 @@ class NetworkModule(private val application: Application){
     fun providesApplicationContext(): Application = application
 
 
-    @Provides
-    @Singleton
-    fun provideCakeViewModelFactory(cakeRequestInterface: CakeRequestInterface, application: Application): CakeViewModelFactory{
-        return CakeViewModelFactory(cakeRequestInterface, application)
-    }
 }

@@ -1,7 +1,11 @@
 package com.robelseyoum3.weekendexercise.viewmodel
 
 import android.app.Application
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.robelseyoum3.weekendexercise.model.CakeDatabase
@@ -43,7 +47,6 @@ class CakeViewModel @Inject constructor
     var cakeDao = CakeDatabase.getDatabase(application)?.CakeDAO()
 
 
-
     fun getCakeData(){
 
         progressbarMutableData?.value = true
@@ -62,11 +65,34 @@ class CakeViewModel @Inject constructor
                 .subscribe(this::handleResponse, this::handleError)
         )
     }
+
+
+
+//    fun isOnline(activity: AppCompatActivity):Boolean{
+//        val connectivityManager=activity.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+//        val networkInfo=connectivityManager.activeNetworkInfo
+//        return networkInfo!=null && networkInfo.isConnected
+//    }
+
 //
 //    fun verifyAvailableNetwork(activity: AppCompatActivity):Boolean{
 //        val connectivityManager=activity.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 //        val networkInfo=connectivityManager.activeNetworkInfo
 //        return networkInfo!=null && networkInfo.isConnected
+//    }
+
+//    fun isConnectedToInternet(): Boolean {
+//        val connectivity = context.getSystemService(
+//            Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+//        if (connectivity != null) {
+//            val info = connectivity.allNetworkInfo
+//            if (info != null)
+//                for (i in info.indices)
+//                    if (info[i].state == NetworkInfo.State.CONNECTED) {
+//                        return true
+//                    }
+//        }
+//        return false
 //    }
 
 
