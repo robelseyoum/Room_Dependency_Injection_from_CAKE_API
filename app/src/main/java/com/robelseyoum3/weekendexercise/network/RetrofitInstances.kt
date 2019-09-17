@@ -1,6 +1,6 @@
 package com.robelseyoum3.weekendexercise.network
 
-import com.robelseyoum3.weekendexercise.Common.Constants
+import com.robelseyoum3.weekendexercise.common.Constants
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

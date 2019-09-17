@@ -1,9 +1,8 @@
 package com.robelseyoum3.weekendexercise.di
 
 import android.app.Application
-import com.robelseyoum3.weekendexercise.Common.Constants
+import com.robelseyoum3.weekendexercise.common.Constants
 import com.robelseyoum3.weekendexercise.network.CakeRequestInterface
-import com.robelseyoum3.weekendexercise.viewmodel.CakeViewModelFactory
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient

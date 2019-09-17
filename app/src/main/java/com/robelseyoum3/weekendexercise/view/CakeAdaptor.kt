@@ -1,4 +1,4 @@
-package com.robelseyoum3.weekendexercise.View
+package com.robelseyoum3.weekendexercise.view
 
 import android.view.LayoutInflater
 import android.view.View

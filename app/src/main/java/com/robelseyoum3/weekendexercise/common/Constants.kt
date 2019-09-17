@@ -1,4 +1,4 @@
-package com.robelseyoum3.weekendexercise.Common
+package com.robelseyoum3.weekendexercise.common
 
 class Constants {
 

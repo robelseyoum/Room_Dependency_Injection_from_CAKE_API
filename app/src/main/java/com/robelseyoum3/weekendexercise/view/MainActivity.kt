@@ -1,4 +1,4 @@
-package com.robelseyoum3.weekendexercise.View
+package com.robelseyoum3.weekendexercise.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
